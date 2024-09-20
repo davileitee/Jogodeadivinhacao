@@ -4,7 +4,9 @@
 
 int main (){
 	
-	int numero_aleatorio, tentativa1, i, contador,jogardenovo, ganhos=0, partidas_jogadas=0,ic,contadorm;
+	int numero_aleatorio, tentativa1, i, contador,jogardenovo, ganhos=0, partidas_jogadas=0,ic=1;
+	float a,b,media;
+	char oper;
 	
 	srand(time(NULL));
 	numero_aleatorio = rand()%100 + 1;
@@ -25,11 +27,22 @@ int main (){
 			i=10;
 			ganhos+=1;
 			partidas_jogadas+=1;
-			
+			media=contador/partidas_jogadas;
 			
 			
 			printf("O numero de tentativas foi de : %d\n",contador);
 			printf("Partidas ganhas:%d\n", ganhos);
+			
+			printf("Digite a conta que deseja fazer(X # Y):\n");
+			scanf("%f %c %f" ,&a ,&oper, &b);
+			switch (oper){
+			case'+':printf("%.2f + %.2f = %.2f\n", a, b, a+b);break;
+			case'-':printf("%.2f - %.2f = %.2f\n", a, b, a-b);break;
+			case'*':printf("%.2f * %.2f = %.2f\n", a, b, a*b);break;
+			case'/':printf("%.2f / %.2f = %.2f\n", a, b, a/b);break;
+}
+			
+				
 			
 			printf("Voce deseja jogar novamente?Sim=1 Nao=0\n");
 			scanf("%d",&jogardenovo);
@@ -44,7 +57,7 @@ int main (){
 				
 			printf("O total de partidas jogadas foram %d.\n",partidas_jogadas);
             printf("O total de partidas ganhas foram %d.\n",ganhos);
-            printf("A media de tentativas para acertar o numero (nas partidas vencidas) foi de ?.");
+            printf("A media de tentativas para acertar o numero (nas partidas vencidas) foi de %.1f.",media);
 				
 				
 				return 0;
@@ -60,7 +73,16 @@ int main (){
 		
 		
 }
+			printf("Digite a conta que deseja fazer(X # Y):\n");
+			scanf("%f %c %f" ,&a ,&oper, &b);
+			switch (oper){
+			case'+':printf("%.2f + %.2f = %.2f\n", a, b, a+b);break;
+			case'-':printf("%.2f - %.2f = %.2f\n", a, b, a-b);break;
+			case'*':printf("%.2f * %.2f = %.2f\n", a, b, a*b);break;
+			case'/':printf("%.2f / %.2f = %.2f\n", a, b, a/b);break;
+}
     partidas_jogadas+=1;
+ 
     
     printf("O numero de tentativas foi atingido. Deseja jogar novamente?\nSim=1 Nao=0\n");
     scanf("%d",&ic);
@@ -69,7 +91,9 @@ int main (){
 //media=?
 printf("O total de partidas jogadas foram de %d.\n",partidas_jogadas);
 printf("O total de partidas ganhas foram de %d.\n",ganhos);
-printf("A media de tentativas para acertar o numero (nas partidas vencidas) foi de ?.");
+printf("A media de tentativas para acertar o numero (nas partidas vencidas) foi de %.1f.",media);
+
+
 
 			
 	return 0;
