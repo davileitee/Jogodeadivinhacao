@@ -33,6 +33,13 @@ int main (){
 			printf("O numero de tentativas foi de : %d\n",contador);
 			printf("Partidas ganhas:%d\n", ganhos);
 			
+			printf("Digite a conta que deseja fazer(X # Y):\n");
+			scanf("%f %c %f" ,&a ,&oper, &b);
+			switch (oper){
+			case'+':printf("%.2f + %.2f = %.2f\n", a, b, a+b);break;
+			case'-':printf("%.2f - %.2f = %.2f\n", a, b, a-b);break;
+			case'*':printf("%.2f * %.2f = %.2f\n", a, b, a*b);break;
+			case'/':printf("%.2f / %.2f = %.2f\n", a, b, a/b);break;
 }
 			
 				
@@ -66,7 +73,13 @@ int main (){
 		
 		
 }
-		
+			printf("Digite a conta que deseja fazer(X # Y):\n");
+			scanf("%f %c %f" ,&a ,&oper, &b);
+			switch (oper){
+			case'+':printf("%.2f + %.2f = %.2f\n", a, b, a+b);break;
+			case'-':printf("%.2f - %.2f = %.2f\n", a, b, a-b);break;
+			case'*':printf("%.2f * %.2f = %.2f\n", a, b, a*b);break;
+			case'/':printf("%.2f / %.2f = %.2f\n", a, b, a/b);break;
 }
     partidas_jogadas+=1;
  
